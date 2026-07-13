@@ -1,0 +1,222 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+}
+
+#viewport{
+
+    width:100vw;
+    height:100vh;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+#world{
+
+    position:absolute;
+
+    width:5367px;
+    height:3022px;
+
+ transform-origin:center center;
+
+
+}
+
+#fondo{
+
+    position:absolute;
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+}
+
+.isla{
+
+    position:absolute;
+
+    width:300px;
+
+    left: 1570px;
+    top: 580px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.isla:hover{
+
+    transform:scale(1.04);
+
+    filter:drop-shadow(0 20px 35px rgba(0,0,0,.25));
+
+}
+.isla{
+
+    transition:
+        transform .35s ease,
+        filter .35s ease;
+
+}
+
+.isla.activa{
+
+    filter:
+        drop-shadow(0 0 5px rgba(255,120,0,.95))
+        drop-shadow(0 0 10px rgba(255,120,0,.65))
+        drop-shadow(0 0 20px rgba(255,120,0,.35));
+
+    transform:scale(1.05);
+
+}
+#isla2{
+
+    left:2540px;
+    top:1300px;
+
+}
+/* ---------- PUNTO VIDEO CARMEN ---------- */
+.grupoPuntos{
+
+    display:none;
+
+}
+
+.grupoPuntos.visible{
+
+    display:block;
+
+}
+#hotspotVideo{
+
+    position:absolute;
+
+    width:22px;
+    height:22px;
+
+
+    left:2930px;
+    top:1450px;
+
+    border-radius:50%;
+
+    background:#ff5a00;
+
+    border:2px solid white;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    z-index:100;
+
+}
+
+#hotspotVideo:hover{
+
+    transform:scale(1.35);
+
+
+
+}
+
+#hotspotVideo.activo{
+
+    transform:scale(1.2);
+
+    box-shadow:
+        0 0 18px rgba(255,90,0,1),
+        0 0 40px rgba(255,90,0,.7);
+
+}
+
+.elemento{
+
+    position:absolute;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.35s;
+
+}
+
+.elemento.visible{
+
+    opacity:1;
+
+}
+
+#videoCarmen{
+
+    left:2930px;
+    top:1450px;
+
+    width:220px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#isla3{
+
+    left:3400px;
+    top:2300px;
+
+}
+
+#isla4{
+
+    left:730px;
+    top:1400px;
+
+}
+
+#isla5{
+
+    left:1470px;
+    top:2270px;
+
+}
+
+#isla6{
+
+    left:4250px;
+    top:1370px;
+
+}
+
+#isla7{
+
+    left:3450px;
+    top:500px;
+
+}
