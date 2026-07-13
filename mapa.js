@@ -32,6 +32,19 @@ window.addEventListener("mouseup", () => {
 
     dragging = false;
 
+
+});
+
+window.addEventListener("mouseleave", () => {
+
+    dragging = false;
+
+});
+
+window.addEventListener("blur", () => {
+
+    dragging = false;
+
 });
 
 window.addEventListener("mousemove", (e) => {
@@ -123,6 +136,8 @@ hotspotFecha.addEventListener("click",()=>{
 
     overlay.classList.add("visible");
 
+    dragging = false;
+
     world.style.transition = "transform 1.8s ease-in-out";
 
 // posición donde querés que quede la ficha
@@ -199,12 +214,20 @@ cerrarFicha.addEventListener("click",()=>{
     overlay.classList.remove("visible");
 
 
+dragging = false;
+
 world.style.transition = "transform 1.4s ease";
 
 x = (window.innerWidth - worldWidth) / 2;
 y = (window.innerHeight - worldHeight) / 2;
 
 world.style.transform = `translate(${x}px, ${y}px)`;
+
+setTimeout(()=>{
+
+    world.style.transition = "";
+
+},1400);
 
 
 });
