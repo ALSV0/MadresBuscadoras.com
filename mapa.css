@@ -156,7 +156,12 @@ body{
 
     pointer-events:none;
 
-    transition:.35s;
+    cursor:pointer;
+
+    transition:
+        opacity .35s ease,
+        transform .25s ease,
+        filter .25s ease;
 
 }
 
@@ -164,16 +169,416 @@ body{
 
     opacity:1;
 
+    pointer-events:auto;
+
 }
+
+.elemento:hover{
+
+    transform:scale(1.08);
+
+    filter:
+        drop-shadow(0 0 12px rgba(255,90,0,.45));
+
+}
+
+.elemento.visible:hover{
+
+    transform:scale(1.06);
+
+    filter:
+        drop-shadow(0 0 10px rgba(255,90,0,.35));
+
+}
+
+
 
 #videoCarmen{
 
-    left:2930px;
-    top:1450px;
+    left:2800px;
+    top:1435px;
+
+    width:180px;
+
+}
+
+
+
+#hotspotFecha{
+
+    position:absolute;
+
+    width:22px;
+    height:22px;
+
+    left:2600px;
+    top:1670px;
+
+    border-radius:50%;
+
+    background:#ff5a00;
+
+    border:2px solid white;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    z-index:100;
+
+}
+
+#fechaCarmen{
+
+    left:2640px;
+    top:1640px;
+
+    width:450px;
+
+}
+#hotspotFecha:hover{
+
+    transform:scale(1.35);
+
+
+
+}
+
+#hotspotFecha.activo{
+
+    transform:scale(1.2);
+
+    box-shadow:
+        0 0 18px rgba(255,90,0,1),
+        0 0 40px rgba(255,90,0,.7);
+
+}
+
+
+
+
+
+
+/*========================================*/
+/* OVERLAY */
+/*========================================*/
+
+#overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.25);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.4s ease;
+
+    z-index:900;
+
+}
+
+#overlay.visible{
+
+    opacity:1;
+
+}
+
+
+/*========================================*/
+/* LINEA */
+/*========================================*/
+
+#lineaFecha{
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    pointer-events:none;
+
+    z-index:920;
+
+}
+
+#caminoFecha{
+
+    fill:none;
+
+    stroke:#ffffff;
+
+    stroke-width:4;
+
+    stroke-linecap:round;
+
+    stroke-linejoin:round;
+
+    stroke-dasharray:18 12;
+
+    filter:drop-shadow(0 0 5px rgba(255,255,255,.6));
+
+}
+
+
+/*========================================*/
+/* FICHA */
+/*========================================*/
+
+#fichaFecha{
+
+    position:absolute;
+
+    left:2700px;
+    top:1890px;
+font-family: 'Franklin Gothic Regular', 'Arial Narrow', Arial, sans-serif;
+
+    width:520px;
+
+    padding:35px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.98),
+            rgba(247,247,247,.98)
+        );
+
+    border:1px solid rgba(0,0,0,.08);
+
+    border-radius:16px;
+
+    box-shadow:
+        0 18px 50px rgba(0,0,0,.25);
+
+    opacity:0;
+
+    transform:
+        translateY(20px)
+        scale(.95);
+
+    transition:
+        opacity .45s ease,
+        transform .45s ease;
+
+    pointer-events:none;
+
+    z-index:950;
+
+}
+
+.Bold{
+    font-family: 'Franklin Gothic Black', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+#fichaFecha.visible{
+
+    opacity:1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    pointer-events:auto;
+
+}
+
+
+/*========================================*/
+/* TITULOS */
+/*========================================*/
+
+
+#fichaFecha p{
+
+    color:#244c8d;
+
+    line-height:1.7;
+
+    font-size:19px;
+
+}
+
+
+/*========================================*/
+/* BOTON CERRAR */
+/*========================================*/
+
+#cerrarFicha{
+
+    position:absolute;
+
+    right:18px;
+
+    top:13px;
+
+    width:22px;
+
+    height:22px;
+
+    border:none;
+
+    background:none;
+
+    color:#ff4800;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+
+#hotspotCarta{
+
+    position:absolute;
+
+    width:22px;
+    height:22px;
+
+    left:2500px;
+    top:1410px;
+
+    border-radius:50%;
+
+    background:#ff5a00;
+
+    border:2px solid white;
+
+    cursor:pointer;
+
+ transition:.25s;
+
+    z-index:100;
+
+
+}
+#cartaCarmen{
+
+    left:2380px;
+    top:1400px;
 
     width:220px;
 
 }
+#hotspotCarta:hover{
+
+    transform:scale(1.35);
+
+
+
+}
+
+#hotspotCarta.activo{
+
+    transform:scale(1.2);
+
+    box-shadow:
+        0 0 18px rgba(255,90,0,1),
+        0 0 40px rgba(255,90,0,.7);
+
+}
+
+
+
+
+#hotspotDocumento{
+
+    position:absolute;
+
+    width:22px;
+    height:22px;
+
+    left:2870px;
+    top:1320px;
+
+    border-radius:50%;
+
+    background:#ff5a00;
+
+    border:2px solid white;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    z-index:100;
+
+}
+#documentoCarmen{
+
+    left:2750px;
+    top:1297px;
+
+    width:120px;
+
+}
+#hotspotDocumento:hover{
+
+    transform:scale(1.35);
+
+
+
+}
+
+#hotspotDocumento.activo{
+
+    transform:scale(1.2);
+
+    box-shadow:
+        0 0 18px rgba(255,90,0,1),
+        0 0 40px rgba(255,90,0,.7);
+
+}
+
+
+
+
+
+.tarjetaMadre{
+
+    position:absolute;
+
+    left:2510px;
+    top:1150px;
+
+    width:320px;
+
+    opacity:0;
+
+    transform:translateY(15px);
+
+    transition:.35s;
+
+
+}
+
+.tarjetaMadre.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    pointer-events:auto;
+
+
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -220,3 +625,5 @@ body{
     top:500px;
 
 }
+
+
