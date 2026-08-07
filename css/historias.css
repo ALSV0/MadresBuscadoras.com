@@ -1,0 +1,408 @@
+*{
+    font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#fff;
+    overflow-x:hidden;
+
+}
+
+#scene{
+
+    position:relative;
+
+    width:1920px;
+
+    min-height:3200px;   /* después la ajustamos */
+
+    margin:auto;
+
+}
+#fixed-layer{
+    position:fixed;
+    inset:0;
+    z-index:10;
+    overflow:hidden;
+
+    pointer-events:none;
+}
+
+.logo,
+.menu-btn,
+#overlay,
+#menuPanel{
+    pointer-events:auto;
+}
+
+
+.fondo{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.logo{
+
+    position:absolute;
+    top:30px;
+    left:40px;
+width: 100px;
+    z-index:20;
+
+}
+
+
+.menu-btn{
+
+    position:fixed;
+
+    top:35px;
+    right: 50px;
+
+    width:30px;
+    height:26px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    cursor:pointer;
+
+    z-index:2000;
+
+}
+
+.menu-btn span{
+
+    width:100%;
+    height:4px;
+
+    background:#ffffff;
+
+    border-radius:5px;
+
+    transition:.35s ease;
+
+}
+
+
+.menu-btn.abierto span:nth-child(1){
+
+    transform:translateY(10px) rotate(45deg);
+
+}
+
+.menu-btn.abierto span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.menu-btn.abierto span:nth-child(3){
+
+    transform:translateY(-13px) rotate(-45deg);
+
+}
+
+/* Fondo oscuro */
+
+#overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:500;
+
+}
+
+/* Panel */
+
+#menuPanel{
+
+    position:fixed;
+
+    top:20px;
+    right:35px;
+
+    width:380px;
+
+    background:rgb(39, 39, 39);
+
+    padding:45px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateX(120%);
+
+    transition:.35s;
+
+    z-index:600;
+
+}
+
+/* Estado abierto */
+
+#overlay.abierto{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+#menuPanel.abierto{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateX(0);
+
+}
+
+
+/* Links */
+
+#menuPanel nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-top:40px;
+
+}
+
+#menuPanel a{
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-size:19px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    padding:22px 0;
+
+    border-bottom:1px solid #ffffff;
+
+        transition:0.3s;
+
+}
+
+#menuPanel nav a:hover{
+    color:#8B0000;   /* Rojo */
+}
+
+
+
+.intro{
+    position:fixed;
+
+    top:110px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    text-align:center;
+
+    font-size:25px;
+    line-height:1.3;
+
+    font-family:"Helvetica",sans-serif;
+    color:#fafafa;
+
+    z-index:1000;
+}
+
+.intro strong{
+    font-weight:700;
+}
+
+.madre1{
+
+    left:281px;
+    top:265px;
+
+}
+
+.madre2{
+
+    left:935px;
+    top:344px;
+
+}
+
+.madre3{
+
+    left:151px;
+    top:730px;
+
+}
+
+.madre4{
+
+    left:526px;
+    top:730px;
+
+}
+
+.madre5{
+
+    left:935px;
+    top:942px;
+
+}
+
+.madre6{
+
+    left:151px;
+    top:1178px;
+
+}
+
+.madre7{
+
+    left:523px;
+    top:1389px;
+
+}
+
+.foto{
+
+    display:block;
+
+}
+
+#scroll-layer{
+
+    position:relative;
+
+    width:1920px;
+
+    height:3500px;
+
+    margin:auto;
+
+    z-index:10;
+
+}
+
+
+.madre{
+    position:absolute;
+}
+
+.foto{
+    display:block;
+    position:relative;
+    z-index:2;
+}
+
+.ficha{
+
+    position:absolute;
+
+    top:99%;
+    left:4px;
+
+    opacity:0;
+
+    transform:translateY(-40px);
+
+    transition:.45s ease;
+
+}
+
+.madre:hover .ficha{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.node{
+
+    position:absolute;
+
+    width:18px;
+    height:18px;
+
+
+    top:250px;
+    right:20px;
+
+    background:#970000cc;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+    z-index:100;
+
+}
+.node:hover{
+
+    box-shadow:0 0 5px rgba(255,0,0,.8);
+
+}
+
+#connections{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:15;
+
+}
+
+line{
+    stroke:#8b0000;
+    stroke-width:1.5;
+    fill:none;
+
+    stroke-dasharray:10 8;
+    stroke-linecap:round;
+
+    opacity:0;
+}
+
+line.activa{
+    opacity:1;
+    animation: flujo 1s linear infinite;
+}
+
+
+
