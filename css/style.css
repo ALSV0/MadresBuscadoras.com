@@ -30,17 +30,6 @@ body{
 
 }
 
-#ui{
-
-    position:fixed;
-
-    inset:0;
-
-    width:100vw;
-    height:100vh;
-
-}
-
 
 
 
@@ -91,15 +80,136 @@ body{
 
     cursor:pointer;
 
-    transition:.25s ease;
-
     z-index:100;
+
+    transition:
+        transform 1.2s cubic-bezier(.22,.61,.36,1),
+        opacity .8s,
+        box-shadow .4s;
+
+}
+
+
+.label{
+
+    position:absolute;
+
+    color:#000;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    opacity:0;
+
+    transform:translateY(8px) scale(1);
+
+    transition:
+        color .3s ease,
+        transform .3s ease,
+        letter-spacing .3s ease,
+        opacity .4s ease;
+
+    pointer-events:none;
+
+    cursor:pointer;
+
+}
+
+.label.visible{
+
+    opacity:1;
+
+    transform:translateY(0) scale(1);
+
+    pointer-events:auto;
+
+}
+
+.label.visible:hover{
+
+    color:#a80000;
+
+    transform:translateY(0) scale(1.08);
+
+
 
 }
 
 .node:hover{
 
     box-shadow:0 0 5px rgba(255,0,0,.8);
+
+}
+
+@keyframes pulso{
+
+    0%{
+
+        transform:scale(1);
+
+        box-shadow:0 0 0 rgba(170,0,0,.8);
+
+    }
+
+    50%{
+
+        transform:scale(1.25);
+
+        box-shadow:0 0 14px rgba(170,0,0,.8);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        box-shadow:0 0 0 rgba(170,0,0,.8);
+
+    }
+
+}
+
+.node.activo{
+
+    animation:pulso 1.3s infinite;
+
+}
+
+#txtFecha{
+
+    left:63%;
+    top:16.5%;
+
+}
+
+#txtDocumento{
+
+    left:40%;
+    top:19.5%;
+
+}
+
+#txtVideo{
+
+    left:54%;
+    top:51.5%;
+
+}
+
+#txtFotos{
+
+    left:40%;
+    top:41.5%;
+
+}
+
+#txtHospital{
+
+    left:44%;
+    top:76%;
 
 }
 
@@ -134,7 +244,7 @@ body{
 #hospital{
 
     left:42%;
-    top:75%;
+    top:76%;
 
 }
 
@@ -171,5 +281,24 @@ line{
 line.activa{
 
     stroke-dashoffset:0;
+
+}
+
+
+/* Todos ocultos */
+.node{
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+/* Nodo visible */
+.node.visible{
+
+    opacity:1;
+
+    pointer-events:auto;
 
 }

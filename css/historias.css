@@ -13,17 +13,9 @@ body{
 
 }
 
-#scene{
 
-    position:relative;
 
-    width:1920px;
 
-    min-height:3200px;   /* después la ajustamos */
-
-    margin:auto;
-
-}
 #fixed-layer{
     position:fixed;
     inset:0;

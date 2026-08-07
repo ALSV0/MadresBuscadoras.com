@@ -30,11 +30,29 @@
         </a>
 
         <!-- Nodos -->
-        <div class="node" id="fecha"></div>
-        <div class="node" id="documentos"></div>
-        <div class="node" id="video"></div>
-        <div class="node" id="fotos"></div>
-        <div class="node" id="hospital"></div>
+        <div class="node visible activo" id="fecha"></div>
+<a class="label" id="txtFecha" href="paginas/fecha.html">FECHA</a>
+
+
+<div class="node" id="documentos"></div>
+<a class="label" id="txtDocumento" href="paginas/carta.html">
+    CARTA
+</a>
+
+<div class="node" id="video"></div>
+<a class="label" id="txtVideo" href="paginas/video.html">
+    VIDEO
+</a>
+
+<div class="node" id="fotos"></div>
+<a class="label" id="txtFotos" href="paginas/fotos.html">
+    FOTOS
+</a>
+
+<div class="node" id="hospital"></div>
+<a class="label" id="txtHospital" href="paginas/hospital.html">
+    HOSPITAL
+</a>
 
         <!-- Líneas -->
         <svg id="connections">
@@ -47,8 +65,12 @@
         </svg>
 
     </div>
-
+<div id="transition"></div>
 <script src="js/app.js"></script>
+
+
+
+
 
 </body>
 

@@ -77,3 +77,16 @@ overlay.addEventListener("click", () => {
 });
 
 
+
+
+
+
+window.addEventListener("load", () => {
+
+    const transition = document.getElementById("transition");
+
+    if (transition) {
+        transition.classList.remove("activa");
+    }
+
+});

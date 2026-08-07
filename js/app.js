@@ -80,25 +80,89 @@ window.addEventListener("resize", actualizarLineas);
 
 fecha.addEventListener("click", () => {
 
+    fecha.classList.remove("activo");
+
     l1.classList.add("activa");
+
+    setTimeout(()=>{
+
+        documentos.classList.add("visible");
+        documentos.classList.add("activo");
+
+        document
+            .getElementById("txtFecha")
+            .classList.add("visible");
+
+    },100);
 
 });
 
 documentos.addEventListener("click", () => {
 
+    documentos.classList.remove("activo");
+
     l2.classList.add("activa");
+
+    setTimeout(() => {
+
+        video.classList.add("visible");
+        video.classList.add("activo");
+
+        document
+            .getElementById("txtDocumento")
+            .classList.add("visible");
+
+    },100);
 
 });
 
 video.addEventListener("click", () => {
 
+    video.classList.remove("activo");
+
     l3.classList.add("activa");
+
+    setTimeout(() => {
+
+        fotos.classList.add("visible");
+        fotos.classList.add("activo");
+
+        document
+            .getElementById("txtVideo")
+            .classList.add("visible");
+
+    },100);
 
 });
 
 fotos.addEventListener("click", () => {
 
+    fotos.classList.remove("activo");
+
     l4.classList.add("activa");
 
+    setTimeout(() => {
+
+        hospital.classList.add("visible");
+        hospital.classList.add("activo");
+
+        document
+            .getElementById("txtFotos")
+            .classList.add("visible");
+
+    },100);
+
 });
+
+hospital.addEventListener("click", () => {
+
+    hospital.classList.remove("activo");
+
+    document
+        .getElementById("txtHospital")
+        .classList.add("visible");
+
+});
+
+
 
