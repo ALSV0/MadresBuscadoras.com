@@ -1,0 +1,175 @@
+*{
+font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    margin:0;
+    overflow:hidden;
+
+    width:100vw;
+    height:100vh;
+
+}
+.identidad{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100vw;
+    height:100vh;
+
+    object-fit:cover;
+
+    z-index:-1;
+
+}
+
+#ui{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100vw;
+    height:100vh;
+
+}
+
+
+
+
+.logo{
+
+    position:absolute;
+
+    top:5%;
+    left:3%;
+
+    width:100px;   /* Ajustamos después */
+
+    height:auto;
+
+    user-select:none;
+    pointer-events:none;
+
+}
+
+.btn-historias{
+    position:absolute;
+
+    /* Después los ajustamos exactamente */
+    top: 39%;
+    left: 68.8%;
+
+    transition:0.3s;
+}
+
+.btn-historias img{
+    width:210px;
+    display:block;
+}
+
+.btn-historias:hover{
+    transform:scale(1.05);
+    filter:drop-shadow(0 0 10px rgba(180,0,0,.7));
+}
+
+.node{
+
+    position:absolute;
+
+    width:18px;
+    height:18px;
+
+    background:#970000cc;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+    z-index:100;
+
+}
+
+.node:hover{
+
+    box-shadow:0 0 5px rgba(255,0,0,.8);
+
+}
+
+#fecha{
+
+    left:61%;
+    top:17%;
+
+}
+
+#documentos{
+
+    left:45%;
+    top:20%;
+
+}
+
+#video{
+
+    left:52%;
+    top:52%;
+
+}
+
+#fotos{
+
+    left:45%;
+    top:42%;
+
+}
+
+#hospital{
+
+    left:42%;
+    top:75%;
+
+}
+
+
+
+#connections{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+}
+
+line{
+
+    stroke:#7b0000;
+    stroke-width:2;
+
+    fill:none;
+
+    stroke-dasharray:1000;
+    stroke-dashoffset:1000;
+
+    transition:stroke-dashoffset .8s ease;
+
+}
+
+line.activa{
+
+    stroke-dashoffset:0;
+
+}
