@@ -90,7 +90,7 @@ width: 100px;
     width:100%;
     height:4px;
 
-    background:#000000;
+    background:#ffffff;
 
     border-radius:5px;
 
@@ -235,7 +235,7 @@ width: 100px;
     line-height:1.3;
 
     font-family:"Helvetica",sans-serif;
-    color:#111;
+    color:#fafafa;
 
     z-index:1000;
 }
