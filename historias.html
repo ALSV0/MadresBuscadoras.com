@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Historias</title>
+
+    <link rel="stylesheet" href="css/historias.css">
+    <link rel="stylesheet" href="css/menu.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<div id="scene">
+    <div id="fixed-layer">
+
+        <img src="img/fondo_historias1.png" class="fondo">
+
+        <img src="img/isologo.png" class="logo">
+
+
+<p class="intro">
+La incertidumbre queda dispersa entre<br>
+documentos, recuerdos, cuerpos y testimonios<br>
+de <strong>madres que nunca dudaron.</strong>
+</p>
+    </div>
+
+<!-- Menú -->
+
+<div id="btnMenu" class="menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div id="overlay"></div>
+
+<div id="menuPanel">
+
+    <nav>
+
+        <a href="index.html">Inicio</a>
+
+        <a href="#">Nosotros</a>
+
+        <a href="#">Contactos</a>
+
+        <a href="#">Agenda</a>
+
+        <a href="#" class="rojo">
+            Quiero contar mi historia
+        </a>
+
+    </nav>
+
+</div>
+
+
+<div id="scroll-layer">
+
+    <a class="madre madre1">
+
+        <img src="img/madre1.png" class="foto">
+
+        <img src="img/ficha1.png" class="ficha">
+
+        <div class="node"></div>
+
+    </a>
+
+    <a class="madre madre2">
+
+        <img src="img/madre2.png" class="foto">
+
+        <img src="img/ficha2.png" class="ficha">
+
+        <div class="node"></div>
+
+    </a>
+
+    <a class="madre madre3">
+        <img src="img/madre3.png" class="foto">
+
+        <img src="img/ficha3.png" class="ficha">
+
+        <div class="node"></div>
+
+     </a>
+
+    <a class="madre madre4">
+
+        <img src="img/madre4.png" class="foto">
+
+        <img src="img/ficha4.png" class="ficha">
+
+        <div class="node" id="node4"></div>
+
+    </a>
+
+    <a  class="madre madre5">
+
+        <img src="img/madre5.png" class="foto">
+
+        <img src="img/ficha5.png" class="ficha">
+
+        <div class="node" id="node5"></div>
+
+    </a>
+
+    <a  class="madre madre6">
+
+        <img src="img/madre6.png" class="foto">
+
+        <img src="img/ficha6.png" class="ficha">
+
+        <div class="node"></div>
+
+    </a>
+
+    <a href="casos/stella-cerati.html" class="madre madre7">
+
+        <img src="img/madre7.png" class="foto">
+
+        <img src="img/ficha7.png" class="ficha">
+
+        <div class="node"></div>
+
+    </a>
+</div>
+    <!-- SVG para las conexiones -->
+
+    <svg id="connections">
+    <line id="linea45"></line>
+    <line id="linea54"></line>
+</svg>
+
+</div>
+
+</div>
+<div id="transition" class="activa"></div>
+<script src="js/historias.js"></script>
+<script src="js/menu.js"></script>
+
+
+</body>
+
+</html>

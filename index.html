@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Madres Buscadoras</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Fondo -->
+    <img src="img/identidad.png" class="identidad">
+
+    <!-- Capa de interfaz -->
+    <div id="ui">
+
+        <!-- Logo -->
+        <img src="img/isologo.png" class="logo">
+
+        <!-- Botón -->
+        <a href="historias.html" class="btn-historias">
+            <img src="img/historias.png">
+        </a>
+
+        <!-- Nodos -->
+        <div class="node visible activo" id="fecha"></div>
+<a class="label" id="txtFecha" href="paginas/fecha.html">Fecha</a>
+
+
+<div class="node" id="documentos"></div>
+<a class="label" id="txtDocumento" href="paginas/carta.html">
+    Carta
+</a>
+
+<div class="node" id="video"></div>
+<a class="label" id="txtVideo" href="paginas/video.html">
+    Video
+</a>
+
+<div class="node" id="fotos"></div>
+<a class="label" id="txtFotos" href="paginas/fotos.html">
+    Fotos
+</a>
+
+<div class="node" id="hospital"></div>
+<a class="label" id="txtHospital" href="paginas/hospital.html">
+    Hospital
+</a>
+
+        <!-- Líneas -->
+        <svg id="connections">
+
+            <line id="l1"></line>
+            <line id="l2"></line>
+            <line id="l3"></line>
+            <line id="l4"></line>
+
+        </svg>
+
+    </div>
+<div id="transition"></div>
+<script src="js/app.js"></script>
+
+
+
+
+
+</body>
+
+</html>

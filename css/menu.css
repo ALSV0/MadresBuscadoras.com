@@ -1,0 +1,212 @@
+*{
+    font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#fff;
+    overflow-x:hidden;
+
+}
+
+
+
+
+#fixed-layer{
+    position:fixed;
+    inset:0;
+    z-index:10;
+    overflow:hidden;
+
+    pointer-events:none;
+}
+
+.logo,
+.menu-btn,
+#overlay,
+#menuPanel{
+    pointer-events:auto;
+}
+
+
+.fondo{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.logo{
+
+    position:absolute;
+    top:30px;
+    left:40px;
+width: 100px;
+    z-index:20;
+
+}
+
+
+.menu-btn{
+
+    position:fixed;
+
+    top:35px;
+    right: 50px;
+
+    width:30px;
+    height:26px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    cursor:pointer;
+
+    z-index:2000;
+
+}
+
+.menu-btn span{
+
+    width:100%;
+    height:4px;
+
+    background:#ffffff;
+
+    border-radius:5px;
+
+    transition:.35s ease;
+
+}
+
+
+.menu-btn.abierto span:nth-child(1){
+
+    transform:translateY(10px) rotate(45deg);
+
+}
+
+.menu-btn.abierto span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.menu-btn.abierto span:nth-child(3){
+
+    transform:translateY(-13px) rotate(-45deg);
+
+}
+
+/* Fondo oscuro */
+
+#overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:500;
+
+}
+
+/* Panel */
+
+#menuPanel{
+
+    position:fixed;
+
+    top:20px;
+    right:35px;
+
+    width:380px;
+
+    background:rgb(39, 39, 39);
+
+    padding:45px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateX(120%);
+
+    transition:.35s;
+
+    z-index:600;
+
+}
+
+/* Estado abierto */
+
+#overlay.abierto{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+#menuPanel.abierto{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateX(0);
+
+}
+
+
+/* Links */
+
+#menuPanel nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-top:40px;
+
+}
+
+#menuPanel a{
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-size:19px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    padding:22px 0;
+
+    border-bottom:1px solid #ffffff;
+
+        transition:0.3s;
+
+}
+
+#menuPanel nav a:hover{
+    color:#8B0000;   /* Rojo */
+}
