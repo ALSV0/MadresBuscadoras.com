@@ -1,12 +1,14 @@
-
-
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
 
 .intro{
     position:fixed;
 
-    top:110px;
+    top:150px;
     left:50%;
-
     transform:translateX(-50%);
 
     text-align:center;
@@ -85,7 +87,7 @@
 
     width:1920px;
 
-    height:3500px;
+    height:1800px;
 
     margin:auto;
 
@@ -223,7 +225,7 @@
     left: 0;
 
     width: 1920px;
-    height: 3500px;
+    height: 1800px;
 
     pointer-events: none;
 
@@ -232,7 +234,7 @@
 
 #connections line {
     stroke: #b00000;
-    stroke-width: 5;
+    stroke-width: 3;
 
     fill: none;
 
@@ -243,4 +245,10 @@
 
 #connections line.activa {
     opacity: 1;
+}
+
+
+#scene {
+    min-height: 1700px;
+    height: 1800px;
 }

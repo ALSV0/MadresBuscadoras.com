@@ -14,19 +14,24 @@ console.log("LINEA45:", linea45);
 console.log("LINEA54:", linea54);
 
 
-function conectar(origen, destino, linea){
+function conectar(origen, destino, linea) {
 
-    const svg = document.getElementById("connections");
-    const svgRect = svg.getBoundingClientRect();
+    const sceneRect = scene.getBoundingClientRect();
 
     const a = origen.getBoundingClientRect();
     const b = destino.getBoundingClientRect();
 
-    const x1 = a.left - svgRect.left + a.width / 2;
-    const y1 = a.top - svgRect.top + a.height / 2;
+    const x1 =
+        a.left - sceneRect.left + a.width / 2;
 
-    const x2 = b.left - svgRect.left + b.width / 2;
-    const y2 = b.top - svgRect.top + b.height / 2;
+    const y1 =
+        a.top - sceneRect.top + a.height / 2;
+
+    const x2 =
+        b.left - sceneRect.left + b.width / 2;
+
+    const y2 =
+        b.top - sceneRect.top + b.height / 2;
 
     linea.setAttribute("x1", x1);
     linea.setAttribute("y1", y1);
@@ -34,8 +39,6 @@ function conectar(origen, destino, linea){
     linea.setAttribute("x2", x2);
     linea.setAttribute("y2", y2);
 }
-
-
 
 function posicionarCartelSarda() {
 

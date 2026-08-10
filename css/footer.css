@@ -1,0 +1,220 @@
+/* =========================================
+   FOOTER
+========================================= */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+    /* TAMAÑO DEL FOOTER */
+    height: 200px;
+    /* ESPACIO INTERNO */
+    padding: 40px 40px;
+     margin-top: 100px;
+     margin-left: 0;
+     margin-right: 0;
+    background-image: url("../img/fondo-footer.png");
+    background-size: 120% 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    z-index: 50;
+        border-radius: 0;
+
+}
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.footer-contenido {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* COLUMNAS */
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1.1fr
+        1.5fr;
+
+    /* ESPACIO ENTRE COLUMNAS */
+    gap: 6.5%;
+    align-items: start;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.footer-logo {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-logo img {
+    width: 180px;
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================================
+   COLUMNAS DE TEXTO
+========================================= */
+
+.footer-columna {
+    color: white;
+    padding-top: 10px;
+}
+
+
+/* TÍTULOS */
+
+.footer-columna h3 {
+    margin: 0 0 16px;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    line-height: 1.1;
+}
+
+
+/* LINKS / TEXTOS */
+
+.footer-columna p {
+    margin: 0 0 10px;
+
+    color: white;
+
+    font-size: 15px;
+
+    line-height: 0.7;
+}
+
+
+/* ENLACES */
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 0 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   REDES SOCIALES
+========================================= */
+
+.footer-redes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
+
+/* ICONOS */
+
+.footer-redes img {
+    width: 20px;
+    height: 20px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0;
+
+    cursor: pointer;
+
+    transition: transform 0.25s ease;
+}
+
+.footer-redes img:hover {
+    transform: scale(1.1);
+}
+
+
+/* =========================================
+   SUSCRIPCIÓN
+========================================= */
+
+.footer-suscripcion {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: 0px;
+}
+
+
+/* CAMPO EMAIL */
+
+.footer-suscripcion input {
+    width: 220px;
+    height: 25px;
+
+    box-sizing: border-box;
+
+    border: none;
+    outline: none;
+
+    padding: 0 10px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    color: #111;
+
+    font-size: 15px;
+}
+
+
+/* BOTÓN */
+
+.footer-suscripcion button {
+    width: 120px;
+    height: 25px;
+
+    flex-shrink: 0;
+
+    padding: 0 20px;
+
+    border: none;
+
+    background: #050505;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
