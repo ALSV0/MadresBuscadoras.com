@@ -547,3 +547,650 @@
     font-weight:800;
 
 }
+
+
+
+
+
+
+
+/* =========================
+   GALERÍA
+========================= */
+
+.galeria{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+/* Cada fotografía */
+
+.foto-galeria{
+
+    position:absolute;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+
+}
+
+/* Las dos imágenes ocupan exactamente
+   el mismo espacio */
+
+.foto-galeria img{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/* Blanco y negro */
+
+.foto-bn{
+
+    opacity:1;
+
+}
+
+/* Color inicialmente oculto */
+
+.foto-color{
+
+    opacity:0;
+
+    transition:opacity .5s ease;
+
+}
+
+
+/* Cuando pasamos el mouse */
+
+.foto-galeria:hover{
+
+    transform:scale(1.08);
+
+    z-index:20;
+
+}
+
+.foto-galeria:hover .foto-bn{
+
+    opacity:0;
+
+}
+
+.foto-galeria:hover .foto-color{
+
+    opacity:1;
+
+}
+
+
+
+/* =========================
+   POSICIÓN DE LAS FOTOS
+========================= */
+
+.foto-galeria:nth-child(1){
+
+    width:220px;
+    height:155px;
+
+    left:75px;
+    top:140px;
+
+}
+
+.foto-galeria:nth-child(2){
+
+    width:200px;
+    height:140px;
+
+    left:435px;
+    top:165px;
+
+}
+
+.foto-galeria:nth-child(3){
+
+    width:300px;
+    height:195px;
+
+    left:575px;
+    top:200px;
+
+}
+
+.foto-galeria:nth-child(4){
+
+    width:220px;
+    height:150px;
+
+    left:480px;
+    top:390px;
+
+}
+
+.foto-galeria:nth-child(5){
+
+    width:185px;
+    height:155px;
+
+    left:1080px;
+    top:145px;
+
+}
+
+.foto-galeria:nth-child(6){
+
+    width:220px;
+    height:145px;
+
+    left:70px;
+    top:345px;
+
+}
+
+.foto-galeria:nth-child(7){
+
+    width:300px;
+    height:200px;
+
+    left:165px;
+    top:375px;
+
+}
+
+.foto-galeria:nth-child(8){
+
+    width:170px;
+    height:175px;
+
+    left:975px;
+    top:185px;
+
+}
+
+.foto-galeria:nth-child(9){
+
+    width:290px;
+    height:190px;
+
+    left:650px;
+    top:360px;
+
+}
+
+.foto-galeria:nth-child(10){
+
+    width:190px;
+    height:280px;
+
+    left:1020px;
+    top:310px;
+
+}
+
+.foto-galeria:nth-child(11){
+
+    width:220px;
+    height:145px;
+
+    left:700px;
+    top:140px;
+
+}
+
+
+/* =========================
+   VISOR DE GALERÍA
+========================= */
+
+#visorGaleria {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity .4s ease;
+
+    z-index: 500;
+}
+
+#visorGaleria.activo {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.galeria-modal {
+    position: relative;
+
+    width: 80vw;
+    height: 80vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imagenGaleria {
+    width: 70vw;
+    height: 75vh;
+
+    object-fit: contain;
+
+}
+
+#cerrarGaleria {
+    position: absolute;
+
+    top: -20px;
+    right: -20px;
+
+    background: none;
+    border: none;
+
+    color: #ffffff;
+
+    font-size: 40px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+
+
+
+
+/* =========================
+   CARTA
+========================= */
+
+.ver-carta {
+    
+    position: fixed;
+
+    bottom: 30px;
+    left: 50%;
+
+    color: #980000;
+    transform: translateX(-50%);
+
+  background: transparent;
+    border: none;
+
+    font-size: 20px;
+    text-decoration: underline;
+
+    font-weight: 800;
+    cursor: pointer;
+
+    z-index: 1000;
+
+    transition: transform .3s ease;
+}
+
+.ver-carta:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+
+/* =========================
+   VISOR DE CARTA
+========================= */
+
+.visor-carta {
+    position: fixed;
+
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .78);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+        visibility: hidden;
+
+    pointer-events: none;
+
+    transition: opacity .4s ease;
+
+    z-index: 9999;
+}
+
+
+/* Cuando se abre */
+
+.visor-carta.activo {
+    opacity: 1;
+        visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* =========================
+   IMAGEN DE LA CARTA
+========================= */
+
+.visor-carta img {
+    max-width: 75%;
+    max-height: 85%;
+
+    object-fit: contain;
+
+    transform: scale(.9);
+
+    transition: transform .4s ease;
+}
+
+
+/* Animación al abrir */
+
+.visor-carta.activo img {
+    transform: scale(1);
+}
+
+
+/* =========================
+   BOTÓN CERRAR
+========================= */
+
+.cerrar-carta {
+    position: absolute;
+
+    top: 28px;
+    right: 100px;
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    z-index: 10001;
+
+    transition:
+        transform .3s ease,
+        color .3s ease;
+}
+
+.cerrar-carta:hover {
+    transform: scale(1.1);
+    color: #b10000;
+}
+
+
+
+
+/* =========================
+   CONTENIDO DE LA CARTA
+========================= */
+
+#slide-carta .subtitulo {
+    position: absolute;
+
+    left: 95px;
+    top: 120px;
+
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+#slide-carta .fecha {
+    position: absolute;
+
+    right: 100px;
+    top: 150px;
+
+    margin: 0;
+
+    font-size: 18px;
+        font-weight: 600;
+
+}
+
+
+/* Texto principal */
+
+#slide-carta .texto-carta {
+    position: absolute;
+
+    left: 90px;
+    right:90px;
+
+    top: 200px;
+    bottom: 70px;
+
+   overflow-y: auto;
+    overflow-x: hidden;
+
+    font-size: 20px;
+    line-height: 1.35;
+        font-weight: 600;
+
+}
+
+
+/* Separación entre párrafos */
+
+#slide-carta .texto-carta p {
+    margin: 0 0 18px 0;
+}
+
+#slide-carta .texto-carta::-webkit-scrollbar {
+    width: 5px;
+}
+
+#slide-carta .texto-carta::-webkit-scrollbar-thumb {
+    background: #b10000;
+    border-radius: 10px;
+}
+
+#slide-carta .texto-carta::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+
+/* =========================
+   CARRUSEL DE FOTOS - CARTA
+========================= */
+
+.fotos-carta {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    
+}
+
+.foto-carta {
+    position: absolute;
+
+    width: 340px;
+    height: 400px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+    pointer-events: auto;
+
+
+    transition:
+        left .7s ease,
+        top .7s ease,
+        width .7s ease,
+        height .7s ease,
+        transform .7s ease,
+        opacity .7s ease;
+
+}
+
+/* Las dos imágenes ocupan exactamente el mismo espacio */
+
+.foto-carta img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+/* Foto B/N */
+
+.foto-carta-bn {
+    opacity: 1;
+}
+
+/* Foto color */
+
+.foto-carta-color {
+    opacity: 0;
+
+}
+
+/* =========================
+   FOTO CENTRAL
+========================= */
+
+.foto-carta.centro {
+
+    width: 540px;
+    height: 600px;
+
+    left: 50%;
+    top: 60%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 20;
+}
+
+.foto-carta.centro .foto-carta-bn {
+    opacity: 0;
+}
+
+.foto-carta.centro .foto-carta-color {
+    opacity: 1;
+}
+
+
+/* =========================
+   FOTO IZQUIERDA
+========================= */
+
+.foto-carta.izquierda {
+    width: 340px;
+    height: 400px;
+
+    left: 8%;
+    top: 50%;
+
+    transform: translateY(-50%) scale(.75);
+
+    z-index: 10;
+}
+
+/* =========================
+   FOTO DERECHA
+========================= */
+
+.foto-carta.derecha {
+    width: 340px;
+    height: 400px;
+
+    right: 8%;
+    left: auto;
+
+    top: 50%;
+
+    transform: translateY(-50%) scale(.75);
+
+    z-index: 10;
+}
+
+/* =========================
+   FOTO DE ATRÁS
+========================= */
+.foto-carta.atras {
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%) scale(.5);
+
+    z-index: 1;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.foto-carta.izquierda:hover {
+    transform: translateY(-50%) scale(.85);
+    z-index: 30;
+}
+
+.foto-carta.derecha:hover {
+    transform: translateY(-50%) scale(.85);
+    z-index: 30;
+}
+
+
+
+
+
+.carta-zoom {
+    cursor: grab;
+
+}
+
+.carta-zoom.arrastrando {
+    cursor: grabbing;
+}
