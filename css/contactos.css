@@ -1,0 +1,160 @@
+*{
+font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* =========================================
+   CONTACTOS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    color: white;
+}
+
+
+/* =========================================
+   PÁGINA
+========================================= */
+
+.contactos-pagina {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url("../img/fondo-contacto.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.contactos-logo {
+    position: absolute;
+
+    top: 35px;
+    left: 40px;
+
+    width: 100px;
+    height: auto;
+
+    z-index: 100;
+}
+
+
+
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.contactos-contenido {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding-top: 95px;
+
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.contactos-header {
+    position: relative;
+
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    z-index: 5;
+}
+
+.contactos-header h1 {
+    color: #c00000;
+
+    font-size: 42px;
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+.contactos-header p {
+    color: white;
+
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   OPCIONES
+========================================= */
+
+.contactos-opciones {
+    width: 80%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.contactos-opciones a {
+    color: white;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   FRASE
+========================================= */
+
+.contactos-frase {
+    width: 70%;
+    max-width: 1000px;
+
+    margin: 220px auto 100px;
+
+    text-align: center;
+}
+
+.contactos-frase p {
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 28px;
+    line-height: 1.35;
+}
