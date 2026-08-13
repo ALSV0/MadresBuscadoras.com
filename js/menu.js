@@ -17,3 +17,4 @@ overlay.addEventListener("click", () => {
     panel.classList.remove("abierto");
 
 });
+

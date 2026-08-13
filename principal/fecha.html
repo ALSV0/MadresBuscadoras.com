@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fechas</title>
+
+    <!-- TIPOGRAFÍA MULISH -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../principal/css/fecha.css">
+
+    <link rel="stylesheet" href="../css/menu.css">
+
+</head>
+
+
+<body>
+
+    <!-- Menú -->
+
+<div id="btnMenu" class="menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div id="overlay"></div>
+
+<div id="menuPanel">
+
+    <nav>
+
+        <a href="index.html">Inicio</a>
+
+        <a href="#">Nosotros</a>
+
+        <a href="contactos.html">Contactos</a>
+
+        <a href="#">Agenda</a>
+
+        <a href="#" class="rojo">
+            Quiero contar mi historia
+        </a>
+
+    </nav>
+
+</div>
+
+    <main class="fechas">
+
+
+        <!-- =========================
+             TITULO
+        ========================== -->
+
+        <h1>fechas</h1>
+
+
+        <!-- =========================
+             FLECHA IZQUIERDA
+        ========================== -->
+
+        <button
+            class="flecha izquierda"
+            id="anterior">
+        </button>
+
+
+        <!-- =========================
+             TIMELINE
+        ========================== -->
+
+        <div class="timeline">
+
+            <div class="años" id="años">
+
+                <div class="año" data-fecha="1968">
+                    1968
+                </div>
+
+                <div class="año" data-fecha="1969">
+                    1969
+                </div>
+
+                <div class="año" data-fecha="1972">
+                    1972
+                </div>
+
+                <div class="año" data-fecha="1978">
+                    1978
+                </div>
+
+                <div class="año" data-fecha="1983">
+                    1983
+                </div>
+
+                <div class="año" data-fecha="1995">
+                    1995
+                </div>
+                <div class="espacio-final"></div>
+
+            </div>
+
+
+            <!-- NOMBRES -->
+
+            <div id="nombresMadres"></div>
+
+        </div>
+
+
+        <!-- =========================
+             FLECHA DERECHA
+        ========================== -->
+
+        <button
+            class="flecha derecha"
+            id="siguiente">
+        </button>
+
+
+    </main>
+
+
+    <script src="../principal/js/fecha.js"></script>
+    <script src="../js/menu.js"></script>
+
+
+</body>
+
+</html>

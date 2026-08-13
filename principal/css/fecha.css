@@ -1,0 +1,278 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+body {
+    font-family: "Mulish", sans-serif;
+
+    background: #740000;
+
+    color: #000;
+}
+
+
+/* =========================
+   TITULO
+========================= */
+
+h1 {
+
+    position: absolute;
+
+    top: 55px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 72px;
+
+    font-weight: 900;
+
+    color: #000;
+
+    z-index: 50;
+}
+
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+
+    position: absolute;
+
+    top: 34%;
+    left: 0;
+
+    width: 100%;
+    height: 300px;
+
+    overflow: visible;
+}
+
+
+/* =========================
+   CONTENEDOR DE AÑOS
+========================= */
+
+.años {
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 0;
+
+    width: max-content;
+
+    white-space: nowrap;
+
+    transform: translateX(0);
+
+    transition: transform 0.55s ease;
+
+    z-index: 10;
+        filter:blur(1px);
+
+}
+
+/* =========================
+   AÑOS
+========================= */
+
+.año {
+
+    flex-shrink: 0;
+
+    font-size: 140px;
+
+    font-weight: 400;
+
+    line-height: 0.85;
+
+    color: #d4d4d4;
+
+    cursor: pointer;
+
+    transition:
+        font-size 0.45s cubic-bezier(.65, 0, .35, 1),
+        color 0.3s ease,
+        font-weight 0.3s ease;
+}
+
+
+/* =========================
+   AÑO ACTIVO
+========================= */
+
+.año.activo {
+
+    font-size: 280px;
+
+    font-weight: 900;
+
+    color: #000;
+}
+
+
+/* =========================
+   NOMBRES DE LAS MADRES
+========================= */
+
+#nombresMadres {
+    position: absolute;
+
+    top: 330px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 4px;
+
+    z-index: 100;
+
+    min-width: max-content;
+
+    /* IMPORTANTE */
+    transform: none;
+}
+
+
+/* =========================
+   NOMBRE
+========================= */
+
+.nombre-madre {
+
+    font-family: "Mulish", sans-serif;
+
+    font-size: 26px;
+
+    font-weight: 400;
+
+    color: #000;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.2s ease,
+        font-weight 0.2s ease,
+        text-decoration 0.2s ease;
+
+}
+
+
+/* =========================
+   HOVER DEL NOMBRE
+========================= */
+
+.nombre-madre:hover {
+
+    color: #ffffff;
+
+    font-weight: 900;
+
+    text-decoration: underline;
+
+}
+
+/* =========================
+   FLECHAS
+========================= */
+
+.flecha {
+
+    position: absolute;
+
+    top: 50%;
+
+    width: 0;
+    height: 0;
+
+    padding: 0;
+    margin: 0;
+
+    background: transparent;
+
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+
+    cursor: pointer;
+
+    z-index: 100;
+
+    transform: translateY(-50%);
+}
+
+
+/* =========================
+   FLECHA IZQUIERDA
+========================= */
+
+.flecha.izquierda {
+
+    left: 25px;
+
+    border-right: 32px solid #d0d0d0;
+}
+
+
+/* =========================
+   FLECHA DERECHA
+========================= */
+
+.flecha.derecha {
+
+    right: 25px;
+
+    border-left: 32px solid #a5a5a5;
+}
+
+
+/* =========================
+   HOVER FLECHAS
+========================= */
+
+.flecha.izquierda:hover {
+
+    border-right-color: #777;
+}
+
+
+.flecha.derecha:hover {
+
+    border-left-color: #000;
+}
+
+.espacio-final {
+    width: 500px;
+    flex-shrink: 0;
+}
