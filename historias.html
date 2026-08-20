@@ -9,145 +9,110 @@
     <title>Historias</title>
 
     <link rel="stylesheet" href="css/historias.css">
-    <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
+
+
+</head>
+
+<header class="top-menu">
+
+    <div class="menu-logo">
+        <a href="index.html">
+            <img src="img/isologoblanco.png" alt="Inicio">
+        </a>
+    </div>
+
+    <nav class="menu-links">
+
+        <a href="index.html">
+            INICIO
+        </a>
+
+        <a href="nosotros.html">
+            NOSOTROS
+        </a>
+
+        <a href="contactos.html">
+            CONTACTOS
+        </a>
+
+        <a href="mi-historia.html">
+            MI HISTORIA
+        </a>
+
+    </nav>
+
+</header>
 
 <body>
 
 <div id="wrapper">
 
 <div id="scene">
-    <div id="fixed-layer">
 
-        <img src="img/fondo_historias1.png" class="fondo">
+    <div id="story-stage">
 
-        <img src="img/isologoblanco.png" class="logo">
+        <img src="img/fondorojo.jpg" class="fondo">
 
+        <img src="img/fondonegro.png" class="plano-negro">
 
-<p class="intro">
-La incertidumbre queda dispersa entre<br>
-documentos, recuerdos y testimonios<br>
-de <strong>madres que nunca dudaron.</strong>
-</p>
     </div>
 
-<!-- Menú -->
 
-<div id="btnMenu" class="menu-btn">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
+    <div id="scroll-layer">
 
-<div id="overlay"></div>
+        <!-- MADRES -->
+        <!-- Las dejamos acá, pero todavía NO las animamos -->
 
-<div id="menuPanel">
-
-    <nav>
-
-        <a href="index.html">Inicio</a>
-
-        <a href="#">Nosotros</a>
-
-        <a href="contactos.html">Contactos</a>
-
-        <a href="#">Agenda</a>
-
-        <a href="#" class="rojo">
-            Quiero contar mi historia
+        <a class="madre madre1">
+             <img src="img/madre1.png" class="foto foto-gris">
+             <img src="img/madre1color.png" class="foto foto-color">
+             <img src="img/ficha1.png" class="ficha">
         </a>
 
-    </nav>
+        <a class="madre madre2">
+            <img src="img/madre2.png" class="foto foto-gris">
+             <img src="img/madre2color.png" class="foto foto-color">
+            <img src="img/ficha2.png" class="ficha">
+        </a>
 
-</div>
+        <a class="madre madre3">
+            <img src="img/madre3.png" class="foto foto-gris">
+             <img src="img/madre3color.png" class="foto foto-color">
+            <img src="img/ficha3.png" class="ficha">
+        </a>
 
+        <a class="madre madre4">
+            <img src="img/madre4.png" class="foto foto-gris">
+             <img src="img/madre4color.png" class="foto foto-color">
+            <img src="img/ficha4.png" class="ficha">
+        </a>
 
-<div id="scroll-layer">
+        <a class="madre madre5">
+            <img src="img/madre5.png" class="foto foto-gris">
+             <img src="img/madre5color.png" class="foto foto-color">
+            <img src="img/ficha5.png" class="ficha">
+        </a>
 
-    <a class="madre madre1">
+        <a class="madre madre6">
+            <img src="img/madre6.png" class="foto foto-gris">
+             <img src="img/madre6color.png" class="foto foto-color">
+            <img src="img/ficha6.png" class="ficha">
+        </a>
 
-        <img src="img/madre1.png" class="foto">
+        <a href="casos/stella-cerati.html" class="madre madre7">
+            <img src="img/madre7.png" class="foto foto-gris">
+             <img src="img/madre7color.png" class="foto foto-color">
+            <img src="img/ficha7.png" class="ficha">
+        </a>
 
-        <img src="img/ficha1.png" class="ficha">
-
-        <div class="node"></div>
-
-    </a>
-
-    <a class="madre madre2">
-
-        <img src="img/madre2.png" class="foto">
-
-        <img src="img/ficha2.png" class="ficha">
-
-        <div class="node"></div>
-
-    </a>
-
-    <a class="madre madre3">
-        <img src="img/madre3.png" class="foto">
-
-        <img src="img/ficha3.png" class="ficha">
-
-        <div class="node"></div>
-
-     </a>
-
-    <a class="madre madre4">
-
-        <img src="img/madre4.png" class="foto">
-
-        <img src="img/ficha4.png" class="ficha">
-
-        <div class="node" id="node4"></div>
-
-    </a>
-
-    <a  class="madre madre5">
-
-        <img src="img/madre5.png" class="foto">
-
-        <img src="img/ficha5.png" class="ficha">
-
-        <div class="node" id="node5"></div>
-
-    </a>
-
-    <a  class="madre madre6">
-
-        <img src="img/madre6.png" class="foto">
-
-        <img src="img/ficha6.png" class="ficha">
-
-        <div class="node"></div>
-
-    </a>
-
-    <a href="casos/stella-cerati.html" class="madre madre7">
-
-        <img src="img/madre7.png" class="foto">
-
-        <img src="img/ficha7.png" class="ficha">
-
-        <div class="node"></div>
-
-    </a>
-
-        <div id="cartelSarda" class="cartel-sarda">
-        <span>MISMO HOSPITAL</span>
-        <strong>Maternidad Sardá</strong>
     </div>
-    <!-- SVG para las conexiones -->
-    <svg id="connections">
-
-    <line id="linea45"></line>
-    <line id="linea54"></line>
-
-</svg>
 
 </div>
 
@@ -160,13 +125,13 @@ de <strong>madres que nunca dudaron.</strong>
 
 <!-- =========================
      FOOTER
-========================= -->
+=========================--> 
 
 <footer class="footer">
 
     <div class="footer-contenido">
 
-        <!-- LOGO -->
+      
         <div class="footer-logo">
 
             <img 
@@ -177,45 +142,48 @@ de <strong>madres que nunca dudaron.</strong>
         </div>
 
 
-        <!-- NOSOTROS -->
+     
         <div class="footer-columna">
 
-            <h3>INICIO</h3>
+            <a href="index.html">
+            <h3>INICIO</h3> </a>
 
-            <a href="#">Nosotros</a>
-            <a href="#">Agenda</a>
+            <a href="historias.html">Historias</a>
+            <a href="./principal/fecha.html">Fechas</a>
+            <a href="./principal/hospitales.html">Hospitales</a>
 
         </div>
 
 
-        <!-- CONTACTOS -->
+     
         <div class="footer-columna">
+ 
+            <a href="nosotros.html">
+            <h3>NOSOTROS</h3> </a>
 
-            <h3>CONTACTOS</h3>
+ 
+            <a href="contactos.html">
+            <h3>CONTACTOS</h3></a>
 
-            <p><a href="#">redes</a></p>
             <p><a href="#">suscribirse</a></p>
-            <p><a href="#">donar</a></p>
 
         </div>
 
 
-        <!-- QUIERO CONTAR MI HISTORIA -->
+     
         <div class="footer-columna">
 
+            <a href="mihistoria.html">
             <h3>
-                QUIERO CONTAR<br>
+                <br>
                 MI HISTORIA
             </h3>
-
-            <p>
-                <a href="#">mi historia</a>
-            </p>
+            </a>
 
         </div>
 
 
-        <!-- REDES SOCIALES + SUSCRIPCIÓN -->
+      
         <div class="footer-columna">
 
             <h3>REDES SOCIALES</h3>
@@ -266,10 +234,10 @@ de <strong>madres que nunca dudaron.</strong>
 
 </footer>
 
-
-<div id="transition" class="activa"></div>
-<script src="js/historias.js"></script>
 <script src="js/menu.js"></script>
+
+<script src="js/historias.js"></script>
+
 
 </body>
 
