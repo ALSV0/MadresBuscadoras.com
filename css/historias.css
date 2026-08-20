@@ -4,113 +4,185 @@ body {
     padding: 0;
 }
 
-.intro{
-    position:fixed;
-
-    top:150px;
-    left:50%;
-    transform:translateX(-50%);
-
-    text-align:center;
-
-    font-size:24px;
-    line-height:1.3;
-
-    font-family:"Helvetica",sans-serif;
-    color:#fafafa;
-
-    z-index:1000;
+body{
+    width: 100%;
+min-height: 100vh;
+    background: #111;
+    overflow-x: hidden;
 }
 
-.intro strong{
-    font-weight:700;
+
+/* =========================
+   ESCENARIO
+========================= */
+
+#scene{
+    position: relative;
+    width: 100%;
+height: 2700px;}
+
+#story-stage{
+    position: fixed;
+
+    top: 0;
+    left: 50%;
+
+    width: 1366px;
+    height: 2888px;
+
+    transform: translateX(-50%);
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   FONDO ROJO
+========================= */
+.fondo{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 1366px;
+    height: auto;
+
+    display: block;
+
+    z-index: 1;
+
+    transform: translateY(0);
+}
+
+
+
+/* =========================
+   PLANO NEGRO
+========================= */
+
+.plano-negro{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 1366px;
+    height: auto;
+
+    display: block;
+
+    z-index: 2;
+
+    
+
+    transform: translateY(0);
 }
 
 .madre1{
 
-    left:281px;
-    top:265px;
+    left:248px;
+    top:450px;
 
 }
 
 .madre2{
 
-    left:935px;
-    top:344px;
+   left:857px;
+   top:600px;
 
 }
 
 .madre3{
 
-    left:151px;
-    top:730px;
+    left:95px;
+    top:1100px;
 
 }
 
 .madre4{
 
-    left:526px;
-    top:730px;
+    left:470px;
+    top:1100px;
 
 }
 
 .madre5{
 
-    left:935px;
-    top:942px;
+    left:860px;
+    top:1600px;
 
 }
 
 .madre6{
 
-    left:151px;
-    top:1178px;
+    left:95px;
+    top:1800px;
 
 }
 
 .madre7{
 
-    left:523px;
-    top:1389px;
+    left:460px;
+    top:2200px;
 
 }
 
-.foto{
 
-    display:block;
+.foto {
+    position: absolute;
+    top: 0;
+    left: 0;
 
+    display: block;
+
+    transition:
+        opacity 0.4s ease,
+        filter 0.4s ease;
 }
 
-#scroll-layer{
-
-    position:relative;
-
-    width:1920px;
-
-    height:1800px;
-
-    margin:auto;
-
-    z-index:10;
-
+.foto-gris {
+    opacity: 1;
+    z-index: 2;
 }
 
+.foto-color {
+    opacity: 0;
+    z-index: 3;
+}
 
 .madre{
     position:absolute;
+    pointer-events: auto;
+    cursor: pointer;
 }
 
-.foto{
-    display:block;
-    position:relative;
-    z-index:2;
+.madre:hover .foto-gris {
+    opacity: 0,5;
+}
+
+.madre:hover .foto-color {
+    opacity: 1;
+}
+
+
+.madre:hover .foto-color {
+    filter:
+        drop-shadow(0 0 8px rgba(255,255,255,0.9))
+        drop-shadow(0 0 25px rgba(255,255,255,0.5));
+}
+
+.foto-color {
+    filter: none;
 }
 
 .ficha{
 
     position:absolute;
 
-    top:99%;
+    top:285px;
     left:4px;
 
     opacity:0;
@@ -129,126 +201,20 @@ body {
 
 }
 
-.node{
-
-    position:absolute;
-
-    width:18px;
-    height:18px;
 
 
-    top:250px;
-    right:20px;
+#scroll-layer{
+    position:fixed;
 
-    background:#970000cc;
+    top:0;
+    left:50%;
 
-    cursor:pointer;
+    width:1366px;
+    height:2888px;
 
-    transition:.25s ease;
+    transform:translateX(-50%) ;
 
-    z-index:100;
+    z-index:10;
 
-}
-.node:hover{
-
-    box-shadow:0 0 5px rgba(255,0,0,.8);
-
-}
-
-
-
-
-
-
-/* =========================
-   CARTEL MATERNIDAD SARDÁ
-========================= */
-
-.cartel-sarda {
-    position: absolute;
-
-    padding: 12px 20px;
-
-    background: rgba(255, 255, 255, 0.95);
-
-    border: 1px solid #b00000;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    opacity: 0;
-    pointer-events: none;
-
-    z-index: 50;
-
-    transform: translate(-50%, -50%) scale(0.8);
-
-    transition:
-        opacity 0.4s ease,
-        transform 0.4s ease;
-}
-
-.cartel-sarda span {
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: #b00000;
-    margin-bottom: 5px;
-}
-
-.cartel-sarda strong {
-    font-size: 18px;
-    font-weight: normal;
-    color: #111;
-    white-space: nowrap;
-}
-
-.cartel-sarda.activo {
-    opacity: 1;
-
-    transform:
-        translate(-50%, -50%)
-        scale(1);
-}
-
-
-
-
-/* =========================
-   CONEXIONES ENTRE MADRES
-========================= */
-
-#connections {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 1920px;
-    height: 1800px;
-
-    pointer-events: none;
-
-    z-index: 40;
-}
-
-#connections line {
-    stroke: #b00000;
-    stroke-width: 3;
-
-    fill: none;
-
-    opacity: 0;
-
-    transition: opacity 0.4s ease;
-}
-
-#connections line.activa {
-    opacity: 1;
-}
-
-
-#scene {
-    min-height: 1700px;
-    height: 1800px;
+    pointer-events:none;
 }

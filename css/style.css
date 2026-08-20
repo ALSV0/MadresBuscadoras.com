@@ -1,6 +1,6 @@
 *{
-font-family: "Mulish", sans-serif;
-  font-optical-sizing: auto;
+ font-family: "Archivo", sans-serif;
+   font-optical-sizing: auto;
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -8,9 +8,8 @@ font-family: "Mulish", sans-serif;
 
 body{
     margin:0;
-    overflow:hidden;
     width:100vw;
-    height:100vh;
+    min-height:300vh;
 }
 
 .identidad{
@@ -23,7 +22,7 @@ body{
 }
 
 .logo{
-    position:absolute;
+    position:fixed;
     top:5%;
     left:3%;
     width:100px;
@@ -33,15 +32,29 @@ body{
 }
 
 .btn-historias{
-    position:absolute;
-    top: calc(39%);
-    left: 68.8%;
-    transform: translateY(0%);
-    transition:0.3s;
+    position:fixed;
+ 
+    left:65.5%;
+    top:68%;
+z-index: 10;
+    opacity:0;
+    transform:translateY(20px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+
+    pointer-events:none;
+}
+
+.btn-historias.visible{
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
 }
 
 .btn-historias img{
-    width:210px;
+    width:250px;
     height: auto;
     display:block;
 }
@@ -51,204 +64,117 @@ body{
     filter:drop-shadow(0 0 10px rgba(180,0,0,.7));
 }
 
-.node{
-    position:absolute;
-    width:18px;
-    height:18px;
-    background:#970000cc;
-    cursor:pointer;
-    z-index:100;
-    transition:
-        transform 1.2s cubic-bezier(.22,.61,.36,1),
-        opacity .8s,
-        box-shadow .4s;
-}
-
 
 .label{
     position:absolute;
-    color:#000;
-    font-size:18px;
-    font-weight:700;
-    text-decoration:none;
-    opacity:0;
-    transform:translateY(8px) scale(1);
-    transition:
-        color .3s ease,
-        transform .3s ease,
-        letter-spacing .3s ease,
-        opacity .4s ease;
-    pointer-events:none;
+    opacity:0.45;
     cursor:pointer;
+
+    transition:opacity 0.3s ease;
 }
 
-.label.visible{
+.label:hover{
     opacity:1;
-    transform:translateY(0) scale(1);
-    pointer-events:auto;
 }
 
-.label.visible:hover{
-    color:#a80000;
-    transform:translateY(0) scale(1.08);
-}
-
-.node:hover{
-    box-shadow:0 0 5px rgba(255,0,0,.8);
-}
-
-@keyframes pulso{
-
-    0%{
-        transform:scale(1);
-        box-shadow:0 0 0 rgba(170,0,0,.8);
-    }
-
-    50%{
-        transform:scale(1.25);
-        box-shadow:0 0 14px rgba(170,0,0,.8);
-    }
-
-    100%{
-        transform:scale(1);
-        box-shadow:0 0 0 rgba(170,0,0,.8);
-    }
-
-}
-
-.node.activo{
-
-    animation:pulso 1.3s infinite;
-
-}
 
 #txtFecha{
+    position:fixed;
 
-    left:63%;
-    top:16.5%;
-
-}
-
-#txtDocumento{
-
-    left:40%;
-    top:19.5%;
-
-}
-
-#txtVideo{
-
-    left:54%;
-    top:51.5%;
-
-}
-
-#txtFotos{
-
-    left:40%;
-    top:41.5%;
-
-}
-
-#txtHospital{
-
-    left:44%;
-    top:76%;
-
-}
-
-#fecha{
-
-    left:61%;
-    top:17%;
-
-}
-
-#documentos{
-
-    left:45%;
-    top:20%;
-
-}
-
-#video{
-
-    left:52%;
-    top:52%;
-
-}
-
-#fotos{
-
-    left:45%;
-    top:42%;
-
-}
-
-#hospital{
-
-    left:42%;
-    top:76%;
-
-}
-
-
-
-#connections{
-
-    position:absolute;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    pointer-events:none;
-
-}
-
-line{
-
-    stroke:#7b0000;
-    stroke-width:2;
-
-    fill:none;
-
-    stroke-dasharray:1000;
-    stroke-dashoffset:1000;
-
-    transition:stroke-dashoffset .8s ease;
-
-}
-
-line.activa{
-
-    stroke-dashoffset:0;
-
-}
-
-
-/* Todos ocultos */
-.node{
+    left:43.3%;
+    top:21.7%;
 
     opacity:0;
+    transform:translateY(20px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
 
     pointer-events:none;
-
 }
 
-/* Nodo visible */
-.node.visible{
-
-    opacity:1;
-
+#txtFecha.visible{
+    opacity:0.45;
+    transform:translateY(0);
     pointer-events:auto;
-
 }
 
-#ui {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+#txtFecha.visible:hover{
+    opacity:1;
 }
+
+
+#txtHospital{
+    position:fixed;
+
+    left:4.9%;
+    top:43.3%;
+
+    opacity:0;
+    transform:translateY(20px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+
+    pointer-events:none;
+}
+
+#txtHospital.visible{
+    opacity:0.45;
+    transform:translateY(0);
+    pointer-events:auto;
+}
+
+#txtHospital.visible:hover{
+    opacity:1;
+}
+
+#inicio{
+    position:fixed;
+
+    left:66%;
+    top:64%;
+
+    opacity:0;
+    transform:translateY(20px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+
+    pointer-events:none;
+}
+
+#inicio.visible{
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
+}
+
+
+#rectangulo{
+    position:fixed;
+    width: 38.15%;
+
+    left:62%;
+    top:50%;
+
+    opacity:0;
+    transform:translateY(20px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+
+    pointer-events:none;
+}
+
+#rectangulo.visible{
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
+}
+
+

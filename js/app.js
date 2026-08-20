@@ -1,168 +1,74 @@
-// ==========================
-// NODOS
-// ==========================
-
-const fecha = document.getElementById("fecha");
-const documentos = document.getElementById("documentos");
-const video = document.getElementById("video");
-const fotos = document.getElementById("fotos");
-const hospital = document.getElementById("hospital");
-
-// ==========================
-// LINEAS
-// ==========================
-
-const l1 = document.getElementById("l1");
-const l2 = document.getElementById("l2");
-const l3 = document.getElementById("l3");
-const l4 = document.getElementById("l4");
+const fecha = document.getElementById("txtFecha");
+const hospital = document.getElementById("txtHospital");
+const historias = document.querySelector(".btn-historias");
+const inicio = document.querySelector("#inicio");
+const rectangulo = document.querySelector("#rectangulo");
 
 
-// ==========================
-// DIBUJAR LINEAS
-// ==========================
+window.addEventListener("scroll", function () {
 
-function conectar(origen, destino, linea){
+    const scroll = window.scrollY;
 
-    const svg = document.getElementById("connections");
-
-    const svgRect = svg.getBoundingClientRect();
-
-    const a = origen.getBoundingClientRect();
-    const b = destino.getBoundingClientRect();
-
-    const x1 = a.left + a.width/2 - svgRect.left;
-    const y1 = a.top + a.height/2 - svgRect.top;
-
-    const x2 = b.left + b.width/2 - svgRect.left;
-    const y2 = b.top + b.height/2 - svgRect.top;
-
-    linea.setAttribute("x1", x1);
-    linea.setAttribute("y1", y1);
-
-    linea.setAttribute("x2", x2);
-    linea.setAttribute("y2", y2);
-
-}
+    console.log("Scroll:", scroll);
 
 
-// ==========================
-// ACTUALIZAR TODAS
-// ==========================
-
-function actualizarLineas(){
-
-    conectar(fecha, documentos, l1);
-    conectar(documentos, video, l2);
-    conectar(video, fotos, l3);
-    conectar(fotos, hospital, l4);
-
-}
+    // FECHAS
+    if (scroll > 100) {
+        fecha.classList.add("visible");
+    }
 
 
-// ==========================
-// CUANDO CARGA
-// ==========================
-
-window.addEventListener("load", actualizarLineas);
-
-
-// ==========================
-// CUANDO CAMBIA EL TAMAÑO
-// ==========================
-
-window.addEventListener("resize", actualizarLineas);
-
-
-// ==========================
-// INTERACCIONES
-// ==========================
-
-fecha.addEventListener("click", () => {
-
-    fecha.classList.remove("activo");
-
-    l1.classList.add("activa");
-
-    setTimeout(()=>{
-
-        documentos.classList.add("visible");
-        documentos.classList.add("activo");
-
-        document
-            .getElementById("txtFecha")
-            .classList.add("visible");
-
-    },100);
-
-});
-
-documentos.addEventListener("click", () => {
-
-    documentos.classList.remove("activo");
-
-    l2.classList.add("activa");
-
-    setTimeout(() => {
-
-        video.classList.add("visible");
-        video.classList.add("activo");
-
-        document
-            .getElementById("txtDocumento")
-            .classList.add("visible");
-
-    },100);
-
-});
-
-video.addEventListener("click", () => {
-
-    video.classList.remove("activo");
-
-    l3.classList.add("activa");
-
-    setTimeout(() => {
-
-        fotos.classList.add("visible");
-        fotos.classList.add("activo");
-
-        document
-            .getElementById("txtVideo")
-            .classList.add("visible");
-
-    },100);
-
-});
-
-fotos.addEventListener("click", () => {
-
-    fotos.classList.remove("activo");
-
-    l4.classList.add("activa");
-
-    setTimeout(() => {
-
+    // +
+    if (scroll > 350) {
         hospital.classList.add("visible");
-        hospital.classList.add("activo");
+    }
 
-        document
-            .getElementById("txtFotos")
-            .classList.add("visible");
 
-    },100);
+    // HISTORIAS
+    if (scroll > 600) {
+        historias.classList.add("visible");
+        inicio.classList.add("visible");
+        rectangulo.classList.add("visible");
+    }
+
+
+    // --------------------------------
+    // MOVIMIENTO DEL RECTÁNGULO
+    // --------------------------------
+
+    if (scroll > 600) {
+
+        // Cuánto sube el rectángulo
+        let movimiento = (scroll - 600) * 0.5;
+
+        // Limita el movimiento máximo
+        movimiento = Math.min(movimiento, 300);
+
+        rectangulo.style.transform =
+            `translateY(-${movimiento}px)`;
+
+    }
 
 });
 
-hospital.addEventListener("click", () => {
 
-    hospital.classList.remove("activo");
+const hospitalImg = document.querySelector("#txtHospital img");
 
-    document
-        .getElementById("txtHospital")
-        .classList.add("visible");
+hospitalImg.addEventListener("mouseenter", () => {
+    hospitalImg.src = hospitalImg.dataset.hover;
+});
 
+hospitalImg.addEventListener("mouseleave", () => {
+    hospitalImg.src = hospitalImg.dataset.normal;
 });
 
 
+const historiasImg = document.querySelector(".btn-historias img");
 
+historiasImg.addEventListener("mouseenter", () => {
+    historiasImg.src = historiasImg.dataset.hover;
+});
+
+historiasImg.addEventListener("mouseleave", () => {
+    historiasImg.src = historiasImg.dataset.normal;
+});

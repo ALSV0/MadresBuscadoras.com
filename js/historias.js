@@ -1,139 +1,191 @@
-const node4 = document.getElementById("node4");
-const node5 = document.getElementById("node5");
+const fondo = document.querySelector(".fondo");
+const planoNegro = document.querySelector(".plano-negro");
 
-const linea45 = document.getElementById("linea45");
-const linea54 = document.getElementById("linea54");
-const scene = document.getElementById("scene");
-
-
-const cartelSarda = document.getElementById("cartelSarda");
-
-console.log("NODE4:", node4);
-console.log("NODE5:", node5);
-console.log("LINEA45:", linea45);
-console.log("LINEA54:", linea54);
+const madres = [
+    document.querySelector(".madre1"),
+    document.querySelector(".madre2"),
+    document.querySelector(".madre3"),
+    document.querySelector(".madre4"),
+    document.querySelector(".madre5"),
+    document.querySelector(".madre6"),
+    document.querySelector(".madre7")
+];
 
 
-function conectar(origen, destino, linea) {
+// =====================================
+// CONFIGURACIÓN
+// =====================================
 
-    const sceneRect = scene.getBoundingClientRect();
+const inicioMadres = 420;
 
-    const a = origen.getBoundingClientRect();
-    const b = destino.getBoundingClientRect();
+const separacion = 500;
 
-    const x1 =
-        a.left - sceneRect.left + a.width / 2;
+const recorridoEntrada = 350;
 
-    const y1 =
-        a.top - sceneRect.top + a.height / 2;
 
-    const x2 =
-        b.left - sceneRect.left + b.width / 2;
-
-    const y2 =
-        b.top - sceneRect.top + b.height / 2;
-
-    linea.setAttribute("x1", x1);
-    linea.setAttribute("y1", y1);
-
-    linea.setAttribute("x2", x2);
-    linea.setAttribute("y2", y2);
-}
-
-function posicionarCartelSarda() {
-
-    const sceneRect = scene.getBoundingClientRect();
-
-    const a = node4.getBoundingClientRect();
-    const b = node5.getBoundingClientRect();
-
-    const x =
-        ((a.left + a.width / 2) +
-        (b.left + b.width / 2)) / 2
-        - sceneRect.left;
-
-    const y =
-        ((a.top + a.height / 2) +
-        (b.top + b.height / 2)) / 2
-        - sceneRect.top;
-
-    cartelSarda.style.left = `${x}px`;
-    cartelSarda.style.top = `${y}px`;
-}
-
-conectar(node4, node5, linea45);
-conectar(node5, node4, linea54);
-
-window.addEventListener("resize", () => {
-
-    conectar(node4, node5, linea45);
-    conectar(node5, node4, linea54);
-
-    if (cartelSarda.classList.contains("activo")) {
-        posicionarCartelSarda();
-    }
-
-});
+// =====================================
+// SCROLL
+// =====================================
 
 window.addEventListener("scroll", () => {
 
-    conectar(node4, node5, linea45);
-    conectar(node5, node4, linea54);
+    const scroll = window.scrollY;
 
-});
 
-node4.addEventListener("click", () => {
+    // =====================================
+    // FASE 1
+    // =====================================
 
-    linea54.classList.remove("activa");
+    if (scroll <= 320) {
 
-    const activa = linea45.classList.toggle("activa");
+        fondo.style.transform =
+            "translateY(0px)";
 
-    if (activa) {
-
-        posicionarCartelSarda();
-        cartelSarda.classList.add("activo");
-
-    } else {
-
-        cartelSarda.classList.remove("activo");
+        planoNegro.style.transform =
+            `translateY(-${scroll}px)`;
 
     }
 
-});
 
+    // =====================================
+    // FASE 2
+    // =====================================
 
-node5.addEventListener("click", () => {
+    else if (scroll <= 420) {
 
-    linea45.classList.remove("activa");
+        const movimiento = scroll - 320;
 
-    const activa = linea54.classList.toggle("activa");
+        fondo.style.transform =
+            `translateY(-${movimiento}px)`;
 
-    if (activa) {
-
-        posicionarCartelSarda();
-        cartelSarda.classList.add("activo");
-
-    } else {
-
-        cartelSarda.classList.remove("activo");
+        planoNegro.style.transform =
+            `translateY(-${320 + movimiento}px)`;
 
     }
 
-});
 
+    // =====================================
+    // FASE 3
+    // =====================================
 
+    else {
 
+        const movimiento = scroll - 420;
 
+        fondo.style.transform =
+            `translateY(-${100 + movimiento}px)`;
 
+        planoNegro.style.transform =
+            `translateY(-${420 + movimiento}px)`;
 
-
-
-window.addEventListener("load", () => {
-
-    const transition = document.getElementById("transition");
-
-    if (transition) {
-        transition.classList.remove("activa");
     }
 
+
+/// =================================
+// FUNCIÓN PARA CADA MADRE
+// =================================
+
+function animarMadre(madre, inicio, cubre, posicionInicial, posicionFrase) {
+
+    if (scroll < inicio) {
+
+        // Todavía no aparece
+        madre.style.transform =
+            `translateY(${posicionInicial}px)`;
+
+    }
+
+    else if (scroll < cubre) {
+
+        // Está entrando suavemente
+        const progreso =
+            (scroll - inicio) /
+            (cubre - inicio);
+
+        const suavizado =
+            progreso * progreso *
+            (3 - 2 * progreso);
+
+        const posicion =
+            posicionInicial +
+            (posicionFrase - posicionInicial) *
+            suavizado;
+
+        madre.style.transform =
+            `translateY(${posicion}px)`;
+
+    }
+
+    else {
+
+        // Ya tapó la frase y continúa subiendo
+        const salida =
+            scroll - cubre;
+
+        madre.style.transform =
+            `translateY(${posicionFrase - salida}px)`;
+
+    }
+}
+
+// =================================
+// MADRES
+// =================================
+
+animarMadre(
+    madres[0],
+    180,
+    500,
+    250,
+    -400
+);
+
+animarMadre(
+    madres[1],
+    180,
+    500,
+    200,
+    -400
+);
+
+animarMadre(madres[2], 700, 1120, 200, -1000);
+
+animarMadre(
+    madres[3],
+    700,
+    1170,
+    200,
+    -1050
+);
+
+animarMadre(
+    madres[4],
+    1000,
+    1720,
+    200,
+    -1600
+);
+
+animarMadre(
+    madres[5],
+    1300,
+    2020,
+    200,
+    -1900
+);
+
+animarMadre(
+    madres[6],
+    1500,
+    2220,
+    200,
+    -2200
+);
+
 });
+
+
+// Ejecutar la animación una vez al cargar la página
+window.dispatchEvent(new Event("scroll"));
+
+
