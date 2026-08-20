@@ -1,0 +1,226 @@
+/* =========================================
+   HOSPITALES
+========================================= */
+
+.pagina-hospitales {
+    position: relative;
+    background-color: rgb(3, 3, 3);
+    background: url("../img/fondohospital.jpg") center center / cover fixed;
+    color: white;
+}
+
+
+/* =========================================
+   ESCENARIO FIJO
+========================================= */
+
+.intro-hospitales {
+
+    height: 100vh;
+
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 20;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   RECORRIDO DE LOS CARTELES
+========================================= */
+
+.archivo-hospitales {
+
+    position: relative;
+
+    height: 150vh;
+
+    z-index: 50;
+
+}
+
+
+/* =========================================
+   CONTADOR
+========================================= */
+
+.contador-hospitales {
+
+    font-size: clamp(120px, 16vw, 230px);
+
+    font-weight: 800;
+
+    line-height: .8;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.intro-hospitales h1 {
+
+    margin: 0;
+
+    font-size: clamp(25px, 3vw, 55px);
+
+    font-weight: 800;
+
+    text-align: center;
+
+}
+
+
+
+
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.establecimiento h2 {
+
+    margin: 0 0 10px;
+
+    color: white;
+
+    font-size: 25px;
+
+    line-height: 1.05;
+
+    font-weight: 400;
+
+}
+
+
+.establecimiento p {
+
+    margin: 0;
+
+    color: #ddd;
+
+    font-size: 14px;
+
+    line-height: 1.2;
+
+}
+
+/* =========================================
+   ESTABLECIMIENTOS
+========================================= */
+
+.establecimiento {
+
+    position: absolute;
+
+    width: 300px;
+
+    padding: 20px 24px;
+
+    box-sizing: border-box;
+
+    background: rgb(126, 0, 0);
+
+    opacity: 60%;
+
+    transform: translateY(100px) scale(.95);
+
+    transition:
+        opacity .5s ease,
+        transform .7s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+/* =========================================
+   POSICIONES INICIALES
+========================================= */
+
+.establecimiento-1 {
+    top: 10vh;
+    left: 10%;
+}
+
+.establecimiento-2 {
+    top: 45vh;
+    left: 43%;
+}
+
+.establecimiento-3 {
+    top: 20vh;
+    right: 5%;
+}
+
+.establecimiento-4 {
+    top: 70vh;
+    left: 5%;
+}
+
+.establecimiento-5 {
+    top: 90vh;
+    left: 46%;
+text-decoration: none;
+}
+
+.establecimiento-6 {
+    top: 100vh;
+    right: 15%;
+}
+
+
+/* =========================================
+   CUANDO APARECE
+========================================= */
+
+.establecimiento.visible {
+
+    opacity: .45;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.establecimiento:hover {
+
+    opacity: 1;
+
+    transform: scale(1.12);
+
+    z-index: 100;
+
+    cursor: pointer;
+
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    position: relative;
+
+    z-index: 50;
+        background-color: rgb(3, 3, 3);
+
+
+}

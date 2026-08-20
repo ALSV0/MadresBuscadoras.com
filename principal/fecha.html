@@ -9,130 +9,730 @@
 
     <title>Fechas</title>
 
-    <!-- TIPOGRAFÍA MULISH -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap"
-        rel="stylesheet"
-    >
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../principal/css/fecha.css">
+    <link rel="stylesheet" href="../css/footer.css">
 
     <link rel="stylesheet" href="../css/menu.css">
 
 </head>
 
+<header class="top-menu">
 
-<body>
+    <div class="menu-logo">
+        <a href="../index.html">
+            <img src="../img/isologoblanco.png" alt="Inicio">
+        </a>
+    </div>
 
-    <!-- Menú -->
+    <nav class="menu-links">
 
-<div id="btnMenu" class="menu-btn">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
+        <a href="../index.html">
+            INICIO
+        </a>
 
-<div id="overlay"></div>
+        <a href="../nosotras.html">
+            NOSOTRAS
+        </a>
 
-<div id="menuPanel">
+        <a href="../contacto.html">
+            CONTACTOS
+        </a>
 
-    <nav>
-
-        <a href="..//index.html">Inicio</a>
-
-        <a href="#">Nosotros</a>
-
-        <a href="..//contactos.html">Contactos</a>
-
-        <a href="#">Agenda</a>
-
-        <a href="#" class="rojo">
-            Quiero contar mi historia
+        <a href="../mi-historia.html">
+            MI HISTORIA
         </a>
 
     </nav>
 
-</div>
+</header>
+
+<body>
+
+
+
+
+
+    <!-- =================================
+         CONTENIDO FECHAS
+    ================================== -->
 
     <main class="fechas">
 
+        <!-- ENCABEZADO -->
+        <section class="intro-fechas">
 
-        <!-- =========================
-             TITULO
-        ========================== -->
+            <h1>
+                EL TIEMPO NO BORRA
+                <br>
+                LAS HISTORIAS
+            </h1>
 
-        <h1>fechas</h1>
+            <p>
+                Una línea temporal de historias,
+                búsquedas y casos registrados.
+            </p>
 
-
-        <!-- =========================
-             FLECHA IZQUIERDA
-        ========================== -->
-
-        <button
-            class="flecha izquierda"
-            id="anterior">
-        </button>
+        </section>
 
 
-        <!-- =========================
-             TIMELINE
-        ========================== -->
+        <!-- =================================
+             LÍNEA TEMPORAL
+        ================================== -->
 
-        <div class="timeline">
+        <section class="timeline">
 
-            <div class="años" id="años">
 
-                <div class="año" data-fecha="1968">
-                    1968
+            <!-- =============================
+                 1965
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1965
                 </div>
-
-                <div class="año" data-fecha="1969">
-                    1969
-                </div>
-
-                <div class="año" data-fecha="1972">
-                    1972
-                </div>
-
-                <div class="año" data-fecha="1978">
-                    1978
-                </div>
-
-                <div class="año" data-fecha="1983">
-                    1983
-                </div>
-
-                <div class="año" data-fecha="1995">
-                    1995
-                </div>
-                <div class="espacio-final"></div>
 
             </div>
 
 
-            <!-- NOMBRES -->
+            <!-- =============================
+                 1966
+            ============================== -->
 
-            <div id="nombresMadres"></div>
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1966
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1967
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1967
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1968 + CASO
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1968
+                </div>
+
+
+                <article class="caso">
+
+                    <div class="caso-numero">
+                        Número de casos: 1
+                    </div>
+
+                    <div class="caso-contenido">
+
+                        <a href="#">
+                            Marta Perez
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- =============================
+                 1969 + CASO
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1969
+                </div>
+
+
+                <article class="caso">
+
+                    <div class="caso-numero">
+                        Número de casos: 1
+                    </div>
+
+                    <div class="caso-contenido">
+
+                        <a href="#">
+                            Leonor Marta Lazzarano
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- =============================
+                 1970
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1970
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1971
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1971
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1972 + 2 CASOS
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1972
+                </div>
+
+
+                <article class="caso">
+
+                    <div class="caso-numero">
+                        Número de casos: 2
+                    </div>
+
+                    <div class="caso-contenido">
+
+                        <a href="#">
+                            Celia del Carmen Miranda
+                        </a>
+
+                        <a href="#">
+                            Bibiana Yuli
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- =============================
+                 1973
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1973
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1974
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1974
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1975
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1975
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1976
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1976
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1977
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1977
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1978 + CASO
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1978
+                </div>
+
+
+                <article class="caso">
+
+                    <div class="caso-numero">
+                        Número de casos: 1
+                    </div>
+
+                    <div class="caso-contenido">
+
+                        <a href="#">
+                            Ester Hublich
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- =============================
+                 1979
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1979
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1980
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1980
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1981
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1981
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1982
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1982
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1983 + CASO
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1983
+                </div>
+
+
+                <article class="caso">
+
+                    <div class="caso-numero">
+                        Número de casos: 1
+                    </div>
+
+                    <div class="caso-contenido">
+
+                        <a href="#">
+                            Alicia Predazzi
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- =============================
+                 1984
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1984
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1985
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1985
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1986
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1986
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1987
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1987
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1988
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1988
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1989
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1989
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1990
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1990
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1991
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1991
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1992
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1992
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1993
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1993
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1994
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1994
+                </div>
+
+            </div>
+
+
+            <!-- =============================
+                 1995 + CASO
+            ============================== -->
+
+            <div class="bloque-anio">
+
+                <div class="anio">
+                    1995
+                </div>
+
+
+                <article class="caso">
+
+                    <div class="caso-numero">
+                        Número de casos: 1
+                    </div>
+
+                    <div class="caso-contenido">
+
+                        <a href="../casos/stella-cerati.html">
+                            Stella Maris
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- 1996 -->
+            <div class="bloque-anio">
+                <div class="anio">1996</div>
+            </div>
+
+            <!-- 1997 -->
+            <div class="bloque-anio">
+                <div class="anio">1997</div>
+            </div>
+
+            <!-- 1998 -->
+            <div class="bloque-anio">
+                <div class="anio">1998</div>
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+     FOOTER
+=========================--> 
+
+<footer class="footer">
+
+    <div class="footer-contenido">
+
+      
+        <div class="footer-logo">
+
+            <img 
+                src="../img/isologoblanco.png" 
+                alt="Madres Buscadoras"
+            >
 
         </div>
 
 
-        <!-- =========================
-             FLECHA DERECHA
-        ========================== -->
+     
+        <div class="footer-columna">
 
-        <button
-            class="flecha derecha"
-            id="siguiente">
-        </button>
+            <a href="../index.html">
+            <h3>INICIO</h3> </a>
+
+            <a href="../historias.html">Historias</a>
+            <a href="./principal/fecha.html">Fechas</a>
+            <a href="./principal/hospitales.html">Hospitales</a>
+
+        </div>
 
 
-    </main>
+     
+        <div class="footer-columna">
+ 
+            <a href="../nosotras.html">
+            <h3>NOSOTRAS</h3> </a>
 
+ 
+            <a href="../contacto.html">
+            <h3>CONTACTOS</h3></a>
+
+            <p><a href="#">suscribirse</a></p>
+
+        </div>
+
+
+     
+        <div class="footer-columna">
+
+            <a href="../mihistoria.html">
+            <h3>
+                <br>
+                MI HISTORIA
+            </h3>
+            </a>
+
+        </div>
+
+
+      
+        <div class="footer-columna">
+
+            <h3>REDES SOCIALES</h3>
+
+            <div class="footer-redes">
+
+                <a href="#">
+                    <img src="../img/icons/instagram.png" alt="Instagram">
+                </a>
+
+                <a href="#">
+                    <img src="../img/icons/whatsapp.png" alt="WhatsApp">
+                </a>
+
+                <a href="#">
+                    <img src="../img/icons/youtube.png" alt="YouTube">
+                </a>
+
+                <a href="#">
+                    <img src="../img/icons/mail.png" alt="Email">
+                </a>
+
+                <a href="#">
+                    <img src="../img/icons/facebook.png" alt="Facebook">
+                </a>
+
+            </div>
+
+
+            <h3>SUSCRIBIRME</h3>
+
+            <form class="footer-suscripcion">
+
+                <input
+                    type="email"
+                    placeholder="correo electrónico"
+                >
+
+                <button type="submit">
+                    ENVIAR
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</footer>
 
     <script src="../principal/js/fecha.js"></script>
     <script src="../js/menu.js"></script>
