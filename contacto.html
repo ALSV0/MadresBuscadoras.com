@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contactos</title>
+
+    <link rel="stylesheet" href="css/contacto.css">
+
+    <link rel="stylesheet" href="css/footer.css">
+
+        <link rel="stylesheet" href="css/menu.css">
+
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+</head>
+
+<header class="top-menu">
+
+    <div class="menu-logo">
+        <a href="index.html">
+            <img src="img/isologoblanco.png" alt="Inicio">
+        </a>
+    </div>
+
+    <nav class="menu-links">
+
+        <a href="index.html">
+            INICIO
+        </a>
+
+        <a href="nosotras.html">
+            NOSOTRAS
+        </a>
+
+        <a href="contacto.html">
+            CONTACTOS
+        </a>
+
+        <a href="mi-historia.html">
+            MI HISTORIA
+        </a>
+
+    </nav>
+
+</header>
+
+<body>
+
+
+
+    <main class="contacto">
+
+        <!-- TÍTULO -->
+        <h1 class="titulo">CONTACTOS</h1>
+
+
+        <!-- MARCADOR DE UBICACIÓN -->
+        <button
+            class="ubicacion"
+            aria-label="Abrir ubicación en Google Maps"
+            type="button"
+        >
+            <span class="pulso"></span>
+            <span class="marcador"></span>
+        </button>
+
+
+        <!-- BOTÓN SUSCRIBIRSE -->
+        <button
+            class="suscribirse"
+            id="suscribirse"
+            type="button"
+            aria-expanded="false"
+        >
+            <span>SUSCRIBIRSE</span>
+        </button>
+
+
+        <!-- PANEL DE SUSCRIPCIÓN -->
+        <section
+            class="panel-suscripcion"
+            id="panelSuscripcion"
+            aria-hidden="true"
+        >
+
+            <form class="formulario" id="formulario">
+
+                <!-- NOMBRE -->
+                <div class="campo">
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="nombre y apellido"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+
+                <!-- CORREO -->
+                <div class="campo">
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="correo electrónico"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+
+                <!-- MENSAJE -->
+                <div class="campo">
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        placeholder="mensaje (opcional)"
+                    ></textarea>
+                </div>
+
+
+                <!-- TEXTO -->
+                <p class="texto-suscripcion">
+                    Seguí de cerca las historias, encuentros y
+                    nuevas voces que continúan buscando respuestas.
+                </p>
+
+
+                <!-- ENVIAR -->
+                <button
+                    class="enviar"
+                    type="submit"
+                    id="enviar"
+                >
+                    ENVIAR
+                </button>
+
+
+                <!-- INSTAGRAM -->
+                <p class="instagram">
+                    IG: @madresunidaseindependientes
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+<!-- =========================
+     FOOTER
+=========================--> 
+
+<footer class="footer">
+
+    <div class="footer-contenido">
+
+      
+        <div class="footer-logo">
+
+            <img 
+                src="img/isologoblanco.png" 
+                alt="Madres Buscadoras"
+            >
+
+        </div>
+
+
+     
+        <div class="footer-columna">
+
+            <a href="index.html">
+            <h3>INICIO</h3> </a>
+
+            <a href="historias.html">Historias</a>
+            <a href="./principal/fecha.html">Fechas</a>
+            <a href="./principal/hospitales.html">Hospitales</a>
+
+        </div>
+
+
+     
+        <div class="footer-columna">
+ 
+            <a href="nosotras.html">
+            <h3>NOSOTRAS</h3> </a>
+
+ 
+            <a href="contacto.html">
+            <h3>CONTACTOS</h3></a>
+
+            <p><a href="#">suscribirse</a></p>
+
+        </div>
+
+
+     
+        <div class="footer-columna">
+
+            <a href="mihistoria.html">
+            <h3>
+                <br>
+                MI HISTORIA
+            </h3>
+            </a>
+
+        </div>
+
+
+      
+        <div class="footer-columna">
+
+            <h3>REDES SOCIALES</h3>
+
+            <div class="footer-redes">
+
+                <a href="#">
+                    <img src="img/icons/instagram.png" alt="Instagram">
+                </a>
+
+                <a href="#">
+                    <img src="img/icons/whatsapp.png" alt="WhatsApp">
+                </a>
+
+                <a href="#">
+                    <img src="img/icons/youtube.png" alt="YouTube">
+                </a>
+
+                <a href="#">
+                    <img src="img/icons/mail.png" alt="Email">
+                </a>
+
+                <a href="#">
+                    <img src="img/icons/facebook.png" alt="Facebook">
+                </a>
+
+            </div>
+
+
+            <h3>SUSCRIBIRME</h3>
+
+            <form class="footer-suscripcion">
+
+                <input
+                    type="email"
+                    placeholder="correo electrónico"
+                >
+
+                <button type="submit">
+                    ENVIAR
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+    <script src="js/contacto.js"></script>
+    <script src="js/menu.js"></script>
+
+
+
+</body>
+
+</html>
